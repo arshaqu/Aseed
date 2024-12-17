@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Add these styles to your Home.css or a new CSS file */
+.navbar-visible {
+  transition: top 0.3s;
+  top: 0;
+}
+
+.navbar-hidden {
+  transition: top 0.3s;
+  top: -100px; /* Adjust this value to hide the navbar */
+}
