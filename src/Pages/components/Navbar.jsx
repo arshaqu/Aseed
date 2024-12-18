@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Logo from '../Assets/Assed Logo.png';
-import brush from '../Assets/brush.png';
+import brush from '../Assets/brush1.png';
 import '../Home.css';
 
 function Navbar() {
@@ -35,8 +35,8 @@ function Navbar() {
       <nav style={{backgroundColor:'white'}} className="relative z-10 border-gray-200 dark:bg-gray-900 dark:border-gray-700 ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src={Logo} className="h-12" alt="Flowbite Logo" />
-            <span style={{fontWeight:'bold'}} className="self-center text-4xl font-bold whitespace-nowrap dark:text-white montserrat">
+            <img src={Logo} className="h-12" alt="Aseed Logo" />
+            <span style={{fontWeight:'bold' ,color:'#1f4e3d'}} className="self-center mt-2 text-4xl font-bold  whitespace-nowrap dark:text-white marcellus">
               ASEED
             </span>
           </a>
@@ -60,7 +60,7 @@ function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-white bg-green-700 rounded md:bg-transparent md:text-green-700 md:p-0 md:dark:text-green-500 dark:bg-green-600 md:dark:bg-transparent"
+                  className="block py-2 px-3 mt-5 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                   aria-current="page"
                 >
                   Home
@@ -69,7 +69,7 @@ function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 mt-5 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Services
                 </a>
@@ -77,7 +77,7 @@ function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 mt-5 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Pricing
                 </a>
@@ -85,23 +85,26 @@ function Navbar() {
               <li>
                 <a
                   href="#"
-                  className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  className="block py-2 px-3 mt-5 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-700 md:p-0 dark:text-white md:dark:hover:text-green-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 >
                   Contact
                 </a>
               </li>
               <div className="flex">
-                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
                   <path fill="#8BC34A" d="M37,39H11l-6,6V11c0-3.3,2.7-6,6-6h26c3.3,0,6,2.7,6,6v22C43,36.3,40.3,39,37,39z"></path>
                 </svg>
                 <div>
-                  <p className="text-green-700">Have any Questions..?</p>
+                  <p className="text-gray-300">Have any Questions..?</p>
                   <p style={{color:'green'}}>Aseed@gmail.com</p>
                 </div>
               </div>
             </ul>
           </div>
+           
+      
         </div>
+        <img  src={brush} alt="brush" style={{position:'absolute'}}  />
    
       </nav>
 

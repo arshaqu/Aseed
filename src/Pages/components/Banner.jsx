@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import BannerImage from '../Assets/Banner1.jpg';
 import BannerImage2 from '../Assets/Banner2.jpg';
-import brush from '../Assets/brush.png';
-
+import brush1 from '../Assets/brush.png';
+import '../Home.css'; // Import the CSS file
+import greenBg from '../Assets/Bg.png';
 
 function Banner() {
-  // State to manage the background image, text, and title
   const [currentBanner, setCurrentBanner] = useState(0);
+  const [animationKey, setAnimationKey] = useState(0); // Key to trigger animation restart
 
   useEffect(() => {
     // Change the banner every 5 seconds
     const interval = setInterval(() => {
-      setCurrentBanner((prevBanner) => (prevBanner === 0 ? 1 : 0));
-    }, 5000); // 5000 ms = 5 seconds
+      setCurrentBanner((prevBanner) => {
+        const nextBanner = prevBanner === 0 ? 1 : 0;
+        setAnimationKey((prevKey) => prevKey + 1); // Update animation key to reset animation
+        return nextBanner;
+      });
+    }, 5000);
 
-    // Cleanup interval on component unmount
     return () => clearInterval(interval);
   }, []);
 
-  // Select banner images, title, text, and color based on the state
   const bannerImage = currentBanner === 0 ? BannerImage : BannerImage2;
-  const textColor = currentBanner === 0 ? '#ffffff' : '#f7c35f';
-   // Change text color based on banner
+  const textColor = currentBanner === 0 ? '#f7c35f' : '#240A34';
+  const titleColor = currentBanner === 0 ? '#ffff' : '#000000';
   const description =
     currentBanner === 0
       ? '"Together for equality, empowerment, and a brighter, inclusive society for all."'
@@ -32,55 +35,50 @@ function Banner() {
       : 'Association for Social Engineering and Entrepreneurship Development';
 
   return (
-    <div className="relative h-screen">
-  {/* Background Image */}
-  <div style={{backgroundColor:'white'}} className="">
-    <img  src={brush} alt="brush" style={{ opacity: 0.5 }} />
-    </div>
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{
-      marginTop: '-20px', // Adjust the margin-top to create space above the image
-      backgroundImage: `url(${bannerImage})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      zIndex: -1, // Ensure background image is below the navbar
-    }}
-  ></div>
+    <div className="relative h-screen overflow-hidden">
+      {/* Background Image */}
+      <div
+        key={animationKey} // Unique key to restart animation
+        className="banner-zoom absolute inset-0 bg-cover bg-center"
+        style={{
+          marginTop: '-10px',
+          backgroundImage: `url(${bannerImage})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          zIndex: -1,
+        }}
+      ></div>
 
-      {/* Overlay Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 sm:px-12 w-full text-white">
+      {/* Overlay Content with Conditional Background */}
+      <div
+  className="relative z-10 flex flex-col items-center justify-center h-full px-6 sm:px-12 text-white"
+  style={{
+    backgroundImage: currentBanner === 0 ? `url(${greenBg})` : `url(${greenBg})`,
+    backgroundPosition: '20% 50%',  // Default background position for larger screens
+    backgroundSize: '250px', // Size of the background image
+    backgroundRepeat: 'no-repeat',
+  }}
+>
+  {/* Content goes here */}
+
         <div className="max-w-5xl">
-          {/* Title */}
-          <h1 style={{ color: textColor }} className="text-4xl lg:text-6xl font-bold mb-4 text-start leading-tight max-w-4xl">
+          <h1
+            style={{ color: textColor }}
+            className="text-3xl lg:text-5xl mb-4 text-start leading-tight max-w-4xl oleo"
+          >
             {title}
           </h1>
-
-          {/* Description */}
-          <p className="text-lg text-gray-200 mb-6 leading-relaxed montserrat">
+          
+          <p style={{ color: titleColor, fontWeight: 'bold' }} className="text-lg text-gray-200 mb-6 leading-relaxed montserrat">
             {description}
           </p>
-
-          {/* Button */}
           <a
             href="#"
-            className="bg-white hover:bg-yellow-500 text-gray-800 font-bold py-4 px-16  rounded-md transition duration-300"
+            className="bg-white hover:bg-yellow-500 text-gray-800 font-bold lg:py-[12px] py-2 lg:px-[25px] px-2 rounded-md transition duration-300"
           >
             Discover More
           </a>
         </div>
-      </div>
-
-      {/* Left & Right Arrows */}
-      <div className="absolute inset-y-0 left-0 flex items-center">
-        <button style={{ color: '#f7c35f' }} className="text-white hover:text-white-400 text-4xl px-4">
-          &#8249;
-        </button>
-      </div>
-      <div className="absolute inset-y-0 right-0 flex items-center">
-        <button style={{ color: '#f7c35f' }} className="text-white hover:text-yellow-400 text-4xl px-4">
-          &#8250;
-        </button>
       </div>
     </div>
   );
