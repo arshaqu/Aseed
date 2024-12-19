@@ -7,14 +7,15 @@ import round from './Assets/15.png'
 
 function AboutUs() {
     return (
-        <div
+        <section  
+          id="about-us"
           className="flex flex-wrap items-center justify-center bg-no-repeat bg-right bg-[length:400px] py-12 px-6"
           style={{ backgroundImage: `url(${Leaf})` }}
         >
           {/* Left Section - Image and Circular Overlay */}
           <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-end">
             {/* Background Large Image */}
-            <div className="rounded-full overflow-hidden w-[400px] h-[400px] lg:w-[500px] lg:h-[500px]">
+            <div className="rounded-full overflow-hidden w-[400px] h-[300px] lg:w-[500px] lg:h-[500px]">
               <img
                 src={image1}
                 alt="Agriculture Background "
@@ -51,37 +52,9 @@ function AboutUs() {
               activities throughout.
             </p>
     
-            {/* Cards */}
-            {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-green-100 rounded-lg p-6 flex items-start space-x-4">
-                <div className="bg-green-500 p-2 rounded-full">
-                  <span role="img" aria-label="farming" className="text-2xl">
-                    🍅
-                  </span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-800">Natural Farming</h3>
-                  <p className="text-gray-600 text-sm mt-1">
-                    Resolve parties but trying she shewing of moment.
-                  </p>
-                </div>
-              </div>
-              <div className="bg-yellow-100 rounded-lg p-6 flex items-start space-x-4">
-                <div className="bg-yellow-500 p-2 rounded-full">
-                  <span role="img" aria-label="tree" className="text-2xl">
-                    🌳
-                  </span>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-800">Quality Products</h3>
-                  <p className="text-gray-600 text-sm mt-1">
-                    Always parties but trying she shewing of moment.
-                  </p>
-                </div>
-              </div>
-            </div> */}
+           
           </div>
-        </div>
+        </section>
   );
 }
 

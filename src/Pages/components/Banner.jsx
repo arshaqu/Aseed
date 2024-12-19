@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import BannerImage from '../Assets/Banner1.jpg';
-import BannerImage2 from '../Assets/Banner2.jpg';
-import brush1 from '../Assets/brush.png';
+import BannerImage2 from '../Assets/Banner3.jpg';
 import '../Home.css'; // Import the CSS file
 import greenBg from '../Assets/Bg.png';
 
@@ -23,8 +22,8 @@ function Banner() {
   }, []);
 
   const bannerImage = currentBanner === 0 ? BannerImage : BannerImage2;
-  const textColor = currentBanner === 0 ? '#f7c35f' : '#240A34';
-  const titleColor = currentBanner === 0 ? '#ffff' : '#000000';
+  const textColor = currentBanner === 0 ? '#fbaf3a' : '#ffff';
+  const titleColor = currentBanner === 0 ? '#ffff' : '#ffff';
   const description =
     currentBanner === 0
       ? '"Together for equality, empowerment, and a brighter, inclusive society for all."'

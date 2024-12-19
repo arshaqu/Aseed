@@ -1,10 +1,9 @@
 import React from 'react';
 import questionImg from './Assets/qustin2.png';
-import Plant from './Assets/bgImg.png';
 
 function Questions() {
   return (
-    <div style={{ ...containerStyle, backgroundImage: `url(${Plant})` }}>
+    <div style={{ ...containerStyle, }}>
       {/* Image Section */}
       <div style={imageContainerStyle}>
         <img 
@@ -24,25 +23,20 @@ function Questions() {
         {/* Accordion Section */}
         <div style={accordionContainerStyle}>
           <details style={accordionStyle}>
-            <summary style={summaryStyle}>What do you add to the soil before you plant a crop?</summary>
+            <summary style={summaryStyle}>What is Your Vision?</summary>
             <p style={contentStyle}>
-              We add natural compost, organic fertilizers, and nutrient-rich materials to enrich the soil and ensure healthy plant growth.
+            Our vision is to create a society where every individual, regardless of their background, caste, gender, ability, or socioeconomic status, has equal access to resources, opportunities, and social justice.
             </p>
           </details>
 
           <details style={accordionStyle}>
-            <summary style={summaryStyle}>Do you use herbicides?</summary>
+            <summary style={summaryStyle}>What is Your Evolution..?</summary>
             <p style={contentStyle}>
-              No, we avoid herbicides and focus on organic farming practices to keep our produce healthy and chemical-free.
+            Since 2018, ASEED has worked in Malappuram, Kozhikode, and Palakkad districts, contributing to post-flood relief (2018-2019) and post-COVID prevention efforts in 2020. The organization also focuses on health education, awareness campaigns, training, and building libraries for students in tribal areas, especially in Nilambur. Registered in 2022 under the 1860 Society Act, ASEED aims to expand its activities and continue empowering vulnerable communities throughout the region
             </p>
           </details>
 
-          <details style={accordionStyle}>
-            <summary style={summaryStyle}>Where does the water come from that you use on your crops?</summary>
-            <p style={contentStyle}>
-              We use natural rainwater collection, sustainable irrigation methods, and groundwater sources responsibly for crop hydration.
-            </p>
-          </details>
+       
         </div>
       </div>
     </div>
@@ -106,13 +100,14 @@ const accordionStyle = {
 const summaryStyle = {
   fontWeight: 600,
   color: '#1f4e3d',
-  fontSize: '14px',
+  fontSize: '13px',
   marginBottom: '8px',
 };
 
 const contentStyle = {
   marginTop: '10px',
   color: '#5A6C57',
+  fontSize:'11px'
 };
 
 export default Questions;

@@ -50,3 +50,43 @@
 .banner-zoom {
   animation: zoomOut 5s ease-out; /* Play zoom-out animation for 5 seconds */
 }
+
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px; /* Adjust based on your preference */
+  right: 20px;  /* Move to the right corner */
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it appears above other elements */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+  background-color: #1DA851; /* Slightly darker green for hover */
+  transform: scale(1.1);
+}
+
+/* Add padding for content below the navbar */
+body {
+  padding-top: 80px; /* Adjust this value to match your navbar height */
+}
+
+/* Ensure the navbar has a higher z-index */
+.navbar {
+  z-index: 100; /* Higher than other elements */
+}
+
+/* Optional: Ensure the brush image doesn't overlap the navbar */
+.brush-image {
+  position: absolute;
+  top: 0;
+  z-index: -1; /* Move it below other content */
+}
