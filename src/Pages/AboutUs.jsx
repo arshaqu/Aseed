@@ -1,5 +1,5 @@
 import React from 'react';
-import image1 from './Assets/Levlihood.jpg'; // Replace with your actual image path
+import image1 from './Assets/Aboutus.jpg'; // Replace with your actual image path
 import image2 from './Assets/Image2.jpg'; // Replace with your actual image path
 import Leaf from './Assets/leaf.png'; // Replace with your actual image path
 import round from './Assets/15.png'

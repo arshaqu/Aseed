@@ -1,6 +1,6 @@
 import React from "react";
 import FooterImg from "../Assets/FooterImg.png";
-import Logo from "../Assets/Assed Logo.png";
+import Logo from "../Assets/Aseed02.png";
 import { PiInstagramLogoFill } from "react-icons/pi";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaFacebookSquare } from "react-icons/fa";
@@ -15,6 +15,7 @@ function Footer() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
+        
       }}
     >
       <div className="container mx-auto px-4">
@@ -22,8 +23,10 @@ function Footer() {
           {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src={Logo} alt="Logo" className="w-18 h-11" />
-              <h1 className="font-bold text-xl marcellus">ASEED</h1>
+            <div className="flex justify-center items-center">
+  <img src={Logo} alt="Logo" className="w-80 h-56 lg:w-64 lg:h-40 lg:ml-[-30px]" />
+</div>
+
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               "Together for equality, empowerment, and a brighter, inclusive society for all"

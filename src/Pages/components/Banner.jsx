@@ -3,6 +3,7 @@ import BannerImage from '../Assets/Banner1.jpg';
 import BannerImage2 from '../Assets/Banner3.jpg';
 import '../Home.css'; // Import the CSS file
 import greenBg from '../Assets/Bg.png';
+import Logoas from '../Assets/LogoAse.png'
 
 function Banner() {
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -22,7 +23,7 @@ function Banner() {
   }, []);
 
   const bannerImage = currentBanner === 0 ? BannerImage : BannerImage2;
-  const textColor = currentBanner === 0 ? '#fbaf3a' : '#ffff';
+  const textColor = currentBanner === 0 ? '#ffff' : '#0B192C';
   const titleColor = currentBanner === 0 ? '#ffff' : '#ffff';
   const description =
     currentBanner === 0
@@ -49,35 +50,59 @@ function Banner() {
       ></div>
 
       {/* Overlay Content with Conditional Background */}
-      <div
-  className="relative z-10 flex flex-col items-center justify-center h-full px-6 sm:px-12 text-white"
-  style={{
-    backgroundImage: currentBanner === 0 ? `url(${greenBg})` : `url(${greenBg})`,
-    backgroundPosition: '20% 50%',  // Default background position for larger screens
-    backgroundSize: '250px', // Size of the background image
-    backgroundRepeat: 'no-repeat',
-  }}
->
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 sm:px-12 text-white">
+      {/* Background and Logo Container */}
+      <div className="absolute inset-0 z-0">
+        <div 
+          className="relative h-full w-full"
+          style={{
+            backgroundImage: `url(${greenBg})`,
+            backgroundPosition: '20% 50%',
+            backgroundSize: '250px',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <img 
+            src={Logoas} 
+            alt="Logo"
+            className="absolute w-80 lg:mt-[70px] lg:ml-[150px] h-auto mt-3"
+            style={{
+              top: '20%',
+              left: '0%',
+              transform: 'translate(-50%, - 50%)',
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl">
+        <h1
+          style={{ color: textColor }}
+          className="text-3xl lg:text-6xl mb-4 text-start leading-tight max-w-4xl oleo"
+        >
+          {title}
+        </h1>
+        
+        <p 
+          style={{ color: titleColor }} 
+          className="lg:text-1xl text-gray-200 mb-6 leading-relaxed montserrat"
+        >
+          {description}
+        </p>
+        
+        <a
+          href="#"
+          className="bg-white hover:bg-yellow-500 text-gray-800 font-bold lg:py-[12px] py-2 lg:px-[25px] px-2 rounded-md transition duration-300"
+        >
+          Discover More
+        </a>
+      </div>
+    
+  
   {/* Content goes here */}
 
-        <div className="max-w-5xl">
-          <h1
-            style={{ color: textColor }}
-            className="text-3xl lg:text-5xl mb-4 text-start leading-tight max-w-4xl oleo"
-          >
-            {title}
-          </h1>
-          
-          <p style={{ color: titleColor, fontWeight: 'bold' }} className="text-lg text-gray-200 mb-6 leading-relaxed montserrat">
-            {description}
-          </p>
-          <a
-            href="#"
-            className="bg-white hover:bg-yellow-500 text-gray-800 font-bold lg:py-[12px] py-2 lg:px-[25px] px-2 rounded-md transition duration-300"
-          >
-            Discover More
-          </a>
-        </div>
+    
       </div>
     </div>
   );

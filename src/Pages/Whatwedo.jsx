@@ -1,8 +1,8 @@
 import React from 'react';
 import Agriculture from './Assets/Agriculture1.jpg';
 import Enterprenuer from './Assets/Enterprenurship2.jpg';
+import YouthandChild from './Assets/WomenChild.jpg';
 import Health from './Assets/Health.jpg';
-import YouthandChild from './Assets/Youth&Child4.jpg';
 import Social from './Assets/Social9.jpg';
 import Education from './Assets/Education6.jpg';
 import Levlihood from './Assets/Levlihood.jpg';
@@ -119,9 +119,10 @@ function Whatwedo() {
 
       {/* Improved Continuous Scrolling Section */}
       <section id='features' style={{ backgroundColor: '#1f4e3d' }} className="py-8 overflow-hidden relative">
-        <h1 className="text-center text-white montserrat text-2xl font-bold mb-8">
-          Our Key Features
+        <h1 className="text-center text-white montserrat text-2xl font-bold ">
+          Our Key Areas
         </h1>
+        <h2 style={{fontWeight:100}} className='text-center mb-8 text-white montserrats text-1xl'>Our work spans across key areas such as:</h2>
         <div className="relative w-full overflow-hidden">
           <div
             className="flex whitespace-nowrap animate-scroll"

@@ -7,6 +7,7 @@ import Whatwedo from './Whatwedo'
 import Questions from './Questions'
 import { FaWhatsapp } from 'react-icons/fa';
 import Footer from './components/Footer'
+import NewsEvents from './NewsEvents'
 
 
 function Home() {
@@ -17,17 +18,10 @@ function Home() {
       <AboutUs/>
       <Whatwedo/>
       <Questions/>
+      <NewsEvents/>
       <Footer/>
 
-      <a
-        href="https://whatsapp.com/channel/0029VafT8iH7oQha2PP31o14"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="whatsapp-icon"
-      >
-        <FaWhatsapp size={32} />
-      </a>
-      
+    
     </section>
   )
 }
