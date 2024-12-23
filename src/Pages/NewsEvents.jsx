@@ -81,13 +81,13 @@ function NewsEvents() {
         {/* Updates Section */}
         <div className="mt-20">
           <a href="https://www.whatsapp.com/channel/0029VafT8iH7oQha2PP31o14">
-          <div className="bg-gradient-to-r from-emerald-500 to-emerald-700 rounded-2xl p-4 md:p-5 text-center relative overflow-hidden">
+          <div className=" text-center relative overflow-hidden">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent opacity-30" />
             </div>
             
             <div className="relative">
-              <h3 className="text-2xl md:text-1xl font-bold text-white mb-6 montserrat">
+              <h3 className="text-2xl md:text-1xl font-bold text-black mb-6 montserrat">
                Click here for stay Connected..!
               </h3>
              

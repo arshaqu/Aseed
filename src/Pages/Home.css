@@ -99,3 +99,32 @@ body {
   top: 0;
   z-index: -1; /* Move it below other content */
 }
+
+
+
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-scroll {
+    display: flex;
+    animation: scroll linear infinite;
+  }
+
+  /* Default animation speed */
+  .animate-scroll {
+    animation-duration: 30s; /* Adjust this for desktop */
+  }
+
+  /* Faster speed for mobile view */
+  @media (max-width: 768px) {
+    .animate-scroll {
+      animation-duration: 15s; /* Increase speed for mobile */
+    }
+  }

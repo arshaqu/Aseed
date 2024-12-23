@@ -1,5 +1,5 @@
-import React from 'react';
-import Agriculture from './Assets/Agriculture1.jpg';
+import React, { useRef, useState } from 'react';
+import Agriculture from './Assets/Agriculture01.jpg';
 import Enterprenuer from './Assets/Enterprenurship2.jpg';
 import YouthandChild from './Assets/WomenChild.jpg';
 import Health from './Assets/Health.jpg';
@@ -9,15 +9,20 @@ import Levlihood from './Assets/Levlihood.jpg';
 import Community from './Assets/Community10.jpg';
 import SocialEnter from './Assets/SocialEnter.jpg'
 import SkillDevelop from './Assets/SkillDevelop.jpg'
+import Wellbeing from './Assets/wellbeings.jpg'
 
 function Whatwedo() {
+  const scrollContainerRef = useRef(null);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const cardWidth = 272;
+
   const cards = [
     {
       id: 1,
       image: Agriculture,
       alt: 'Organic Products',
-      title: 'Agriculture and Livelihood',
-      description: ' Enhancing food security and improving economic conditions through sustainable agricultural practices.',
+      title: 'Agriculture',
+      description: 'Enhancing food security and improving economic conditions through sustainable agricultural practices.',
     },
     {
       id: 2,
@@ -42,7 +47,7 @@ function Whatwedo() {
     },
     {
       id: 5,
-      image:SocialEnter,
+      image: SocialEnter,
       alt: 'More Vegetables',
       title: 'Social Entrepreneurship',
       description: 'Encouraging business models that address social challenges and promote community development.',
@@ -82,7 +87,39 @@ function Whatwedo() {
       title: 'Community Engagement',
       description: 'Building resilient and supportive communities through participatory approaches that empower individuals to drive change.',
     },
+    {
+      id: 11,
+      image: Wellbeing,
+      alt: 'Gourmet Ingredients',
+      title: 'Social security & Wellbeing',
+      description: 'Building resilient and supportive communities through participatory approaches that empower individuals to drive change.',
+    },
   ];
+
+  const handleScroll = (direction) => {
+    if (scrollContainerRef.current) {
+      // Pause auto-scrolling temporarily
+      setIsAutoScrolling(true);
+
+      const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+      const maxScroll = scrollContainerRef.current.scrollWidth - scrollContainerRef.current.clientWidth;
+
+      scrollContainerRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth',
+      });
+
+      // Check if scroll reached the end and reset to the start or vice versa
+      if (direction === 'right' && scrollContainerRef.current.scrollLeft >= maxScroll) {
+        scrollContainerRef.current.scrollLeft = 0;
+      } else if (direction === 'left' && scrollContainerRef.current.scrollLeft <= 0) {
+        scrollContainerRef.current.scrollLeft = maxScroll;
+      }
+
+      // Resume auto-scrolling after 3 seconds
+      setTimeout(() => setIsAutoScrolling(true), 3000);
+    }
+  };
 
   return (
     <div>
@@ -92,23 +129,21 @@ function Whatwedo() {
           <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
             <p className="text-green-600 font-semibold uppercase mb-2">Explore</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-             Our Misssion{' '}
+              Our Mission{' '}
               <span className="text-black"></span>
             </h2>
           </div>
           <div className="hidden md:block border-l border-gray-300 h-32 mx-8"></div>
           <div className="w-full md:w-1/2">
-            <p style={{fontSize:'13px'}} className="text-gray-400  leading-relaxed montserrat">
-            Our mission focuses on bridging the gap between marginalized communities and mainstream opportunities. By leveraging initiatives
-             in livelihood and entrepreneurship, we aim to create pathways for social cohesion, inclusive growth, and the restoration of human
+            <p style={{ fontSize: '13px' }} className="text-gray-400 leading-relaxed montserrat">
+              Our mission focuses on bridging the gap between marginalized communities and mainstream opportunities. By leveraging initiatives
+              in livelihood and entrepreneurship, we aim to create pathways for social cohesion, inclusive growth, and the restoration of human
               dignity. Through empowering women, youth, children, and vulnerable groups, we are laying the foundation for a future built on equality,
-               self-reliance, and mutual support.
-
+              self-reliance, and mutual support.
             </p>
 
-            <p style={{fontSize:'13px'}} className="text-gray-400 mt-3 mb-6 leading-relaxed montserrat">
-            We are committed to creating sustainable change by addressing these interconnected areas. Through our collective efforts, we aim to inspire a society that embraces diversity, encourages opportunity, and fosters social justice for all.
-
+            <p style={{ fontSize: '13px' }} className="text-gray-400 mt-3 mb-6 leading-relaxed montserrat">
+              We are committed to creating sustainable change by addressing these interconnected areas. Through our collective efforts, we aim to inspire a society that embraces diversity, encourages opportunity, and fosters social justice for all.
             </p>
             <button className="bg-green-500 text-white font-semibold py-3 px-6 rounded hover:bg-green-600 transition duration-300">
               Discover More
@@ -119,14 +154,38 @@ function Whatwedo() {
 
       {/* Improved Continuous Scrolling Section */}
       <section id='features' style={{ backgroundColor: '#1f4e3d' }} className="py-8 overflow-hidden relative">
-        <h1 className="text-center text-white montserrat text-2xl font-bold ">
+        <h1 className="text-center text-white montserrat text-2xl font-bold">
           Our Key Areas
         </h1>
-        <h2 style={{fontWeight:100}} className='text-center mb-8 text-white montserrats text-1xl'>Our work spans across key areas such as:</h2>
-        <div className="relative w-full overflow-hidden">
+        <h2 style={{ fontWeight: 100 }} className='text-center mb-8 text-white montserrats text-1xl'>
+          Our work spans across key areas such as:
+        </h2>
+
+        {/* Navigation Buttons */}
+        <button
+          onClick={() => handleScroll('left')}
+          className="absolute left-4 top-1/2 z-10 bg-white/80 hover:bg-white text-green-700 rounded-full p-2 transform -translate-y-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+          </svg>
+        </button>
+
+        <button
+          onClick={() => handleScroll('right')}
+          className="absolute right-4 top-1/2 z-10 bg-white/80 hover:bg-white text-green-700 rounded-full p-2 transform -translate-y-1/2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </button>
+
+        <div className="relative w-full overflow-hidden" ref={scrollContainerRef}>
           <div
-            className="flex whitespace-nowrap animate-scroll"
-            style={{ animationDuration: `${cards.length * 2 }s` }}
+            className={`flex whitespace-nowrap ${isAutoScrolling ? 'animate-scroll' : ''}`}
+            style={{
+              animationDuration: `${window.innerWidth <= 768 ? cards.length : cards.length * 2}s`,
+            }}
           >
             {cards.concat(cards).map((card, index) => (
               <div
@@ -142,26 +201,26 @@ function Whatwedo() {
                     />
                   </div>
                   <div className="p-4 flex-grow flex flex-col">
-                <h5 className="font-bold text-gray-900 dark:text-white text-center text-lg mb-2 montserrat">
-                  {card.title}
-                </h5>
-                <p 
-                  style={{
-                    maxWidth: '500px',
-                    overflowWrap: 'break-word', 
-                    whiteSpace: 'normal'
-                  }} 
-                  className="text-sm text-gray-600 dark:text-gray-400 text-center flex-grow montserrat"
-                >
-                  {card.description}
-                </p>
-              </div>
-
+                    <h5 className="font-bold text-gray-900 dark:text-white text-center text-lg mb-2 montserrat">
+                      {card.title}
+                    </h5>
+                    <p
+                      style={{
+                        maxWidth: '500px',
+                        overflowWrap: 'break-word',
+                        whiteSpace: 'normal',
+                      }}
+                      className="text-sm text-gray-600 dark:text-gray-400 text-center flex-grow montserrat"
+                    >
+                      {card.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
+
         <style>
           {`
             @keyframes scroll {
@@ -171,25 +230,10 @@ function Whatwedo() {
               100% {
                 transform: translateX(-100%);
               }
-                 0% {
-                transform: translateX(0);
-              }
             }
             .animate-scroll {
               display: flex;
               animation: scroll linear infinite;
-            }
-            .line-clamp-2 {
-              display: -webkit-box;
-              -webkit-line-clamp: 2;
-              -webkit-box-orient: vertical;
-              overflow: hidden;
-            }
-            .line-clamp-4 {
-              display: -webkit-box;
-              -webkit-line-clamp: 4;
-              -webkit-box-orient: vertical;
-              overflow: hidden;
             }
           `}
         </style>

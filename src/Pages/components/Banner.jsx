@@ -57,7 +57,7 @@ function Banner() {
           className="relative h-full  w-full "
           style={{
             backgroundImage: `url(${greenBg})`,
-            backgroundPosition: '20% 50%',
+            backgroundPosition: '25% 48%',
             backgroundSize: '250px',
             backgroundRepeat: 'no-repeat',
           }}
@@ -66,10 +66,10 @@ function Banner() {
     <img 
         src={Logoas} 
         alt="Logo"
-        className="absolute w-80 h-auto mt-3 ml-[100px] sm:ml-[50px]"
+        className="absolute w-80 h-auto mt-3 ml-[80px] sm:ml-[160px]"
         style={{
-            top: '46%',
-            left: '20%',
+            top: '42%',
+            left: '19%',
             transform: 'translate(-50%, -50%)',
         }}
     />
