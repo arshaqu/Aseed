@@ -54,7 +54,7 @@ function Banner() {
       {/* Background and Logo Container */}
       <div className="absolute inset-0 z-0">
         <div 
-          className="relative h-full w-full"
+          className="relative h-full  w-full "
           style={{
             backgroundImage: `url(${greenBg})`,
             backgroundPosition: '20% 50%',
@@ -62,16 +62,20 @@ function Banner() {
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <img 
-            src={Logoas} 
-            alt="Logo"
-            className="absolute w-80 lg:mt-[70px] lg:ml-[150px] h-auto mt-3"
-            style={{
-              top: '20%',
-              left: '0%',
-              transform: 'translate(-50%, - 50%)',
-            }}
-          />
+          <div className="">
+    <img 
+        src={Logoas} 
+        alt="Logo"
+        className="absolute w-80 h-auto mt-3 ml-[100px] sm:ml-[50px]"
+        style={{
+            top: '46%',
+            left: '20%',
+            transform: 'translate(-50%, -50%)',
+        }}
+    />
+</div>
+
+
         </div>
       </div>
 
