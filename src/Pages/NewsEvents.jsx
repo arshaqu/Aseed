@@ -5,7 +5,7 @@ import Event3 from './Assets/Event3.jpg';
 function NewsEvents() {
   const events = [
     {
-      image: Event3,
+      image:  Event3,
       date: "18",
       monthYear: "Apr, 22",
       author: "Admin",
@@ -28,6 +28,7 @@ function NewsEvents() {
       title: "Gender Justice and Social Life",
       description: "An awareness class on Gender Justice and Social Life was conducted for the students of Government Tribal Higher Secondary School Sholayur.",
     },
+   
   ];
 
   return (
@@ -74,8 +75,49 @@ function NewsEvents() {
                 </p>
         
               </div>
+              
             </div>
           ))}
+        </div>
+          
+
+
+        <div className="grid  mt-[25px] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
+          
+            <div
+              className="group  shadow bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative"  
+            >
+              {/* Image Container */}
+              <div className="relative overflow-hidden h-48 ">
+                <img
+                  src={Event3}
+                  alt='fdsfsdf'
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+              
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+               
+                <p className="text-sm text-gray-600 mb-4 line-clamp-2 montserrat">
+                Explore Our Broucher Here...!
+                </p>
+        
+              </div>
+              
+            </div>
+         
+  {/* Content */}
+  <div className="p-8">
+               
+  <p className="text-sm text-center align-center lg:mt-[80px] text-gray-600 mb-4 line-clamp-2 montserrat">
+  Explore More.......
+</p>
+
+       
+             </div>
+
         </div>
 
         {/* Updates Section */}

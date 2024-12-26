@@ -17,20 +17,20 @@ function Questions() {
       <div className='montserrat' style={textContainerStyle}>
         <h4 style={headerStyle}>GET TO KNOW US</h4>
         <h2 style={titleStyle}>
-          Agriculture matters to <br /> the future of development
+        ASEED is the key to the future of <br /> sustainable social development
         </h2>
 
         {/* Accordion Section */}
         <div style={accordionContainerStyle}>
           <details style={accordionStyle}>
-            <summary style={summaryStyle}>What is Your Vision?</summary>
+            <summary style={summaryStyle}>What is our vision ?</summary>
             <p style={contentStyle}>
             Our vision is to create a society where every individual, regardless of their background, caste, gender, ability, or socioeconomic status, has equal access to resources, opportunities, and social justice.
             </p>
           </details>
 
           <details style={accordionStyle}>
-            <summary style={summaryStyle}>What is Your Evolution..?</summary>
+            <summary style={summaryStyle}>How did we evolve ?</summary>
             <p style={contentStyle}>
             Since 2018, ASEED has worked in Malappuram, Kozhikode, and Palakkad districts, contributing to post-flood relief (2018-2019) and post-COVID prevention efforts in 2020. The organization also focuses on health education, awareness campaigns, training, and building libraries for students in tribal areas, especially in Nilambur. Registered in 2022 under the 1860 Society Act, ASEED aims to expand its activities and continue empowering vulnerable communities throughout the region
             </p>

@@ -3,7 +3,7 @@ import BannerImage from '../Assets/Banner1.jpg';
 import BannerImage2 from '../Assets/Banner3.jpg';
 import '../Home.css'; // Import the CSS file
 import greenBg from '../Assets/Bg.png';
-import Logoas from '../Assets/LogoAse.png'
+import Logoas from '../Assets/AseedBlack.png'
 
 function Banner() {
   const [currentBanner, setCurrentBanner] = useState(0);
@@ -23,7 +23,7 @@ function Banner() {
   }, []);
 
   const bannerImage = currentBanner === 0 ? BannerImage : BannerImage2;
-  const textColor = currentBanner === 0 ? '#ffff' : '#0B192C';
+  const textColor = currentBanner === 0 ? '#ffff' : '#EFE784';
   const titleColor = currentBanner === 0 ? '#ffff' : '#ffff';
   const description =
     currentBanner === 0
@@ -80,10 +80,10 @@ function Banner() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl">
+      <div className="relative z-10 max-w-6xl">
         <h1
-          style={{ color: textColor }}
-          className="text-3xl lg:text-6xl mb-4 text-start leading-tight max-w-4xl oleo"
+          style={{ color: textColor,fontSize:'bold',fontWeight:'bold' }}
+          className="text-4xl lg:text-7xl mb-4 text-start leading-tight max-w-5xl oswald"
         >
           {title}
         </h1>
