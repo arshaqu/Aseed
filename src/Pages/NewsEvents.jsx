@@ -78,10 +78,6 @@ function NewsEvents() {
             </div>
           ))}
 
-          
-
-
-
 
 
 <a

@@ -39,17 +39,16 @@ function AboutUs() {
               About Us
             </h2>
             <p className="text-gray-900 mb-6 leading-relaxed marcellus">
-              The Association for Social Engineering and Entrepreneurship Development (ASEED) is a non-profit organization
-              based in Malappuram district of Kerala. The institution is aiming at the sustainable and comprehensive
-              development of the marginalized sections of the community. Since April 2018 ASEEDs activities are primarily in
-              Malappuram, Kozhikode, and Palakkad districts. The organization actively participated in 2018 and 2019
-              post-flood relief activities and 2020 post-covid prevention activities. The other major activities, including
-              health education, campaigns, awareness programs, training, library construction for students in tribal areas,
-              and distribution of study materials in the Nilamarbur region.
+            Association for Social Engineering and Entrepreneurship Development (ASEED) is a Non 
+            profit organisation registered under 1860 societies registration act, Located in
+             Munduparambu Malappuram District Kerala, we ASEED, dedicated to fostering a society 
+             where every individual has equal access to opportunities, resources, and social justice.
+              Our vision is rooted in inclusivity, striving to create a world where background, caste, 
+              gender, ability, or socioeconomic status do not limit one's access to a better life. 
               <br />
               <br />
-              In the year 2022, this association was registered under the 1860 Society Act and decided to expand its further
-              activities throughout.
+              We believe in empowering individuals and communities to thrive through a comprehensive approach to social, economic, 
+              and health development.
             </p>
     
            
