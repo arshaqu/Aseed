@@ -32,7 +32,7 @@ function Banner() {
   const title =
     currentBanner === 0
       ? 'Association for Social Engineering & Entrepreneurship Development'
-      : 'Association for Social Engineering and Entrepreneurship Development';
+      : 'Association for Social Engineering & Entrepreneurship Development';
 
   return (
     <div className="relative h-screen overflow-hidden">
@@ -81,12 +81,13 @@ function Banner() {
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl">
-        <h1
-          style={{ color: textColor,fontSize:'bold',fontWeight:'bold' }}
-          className="text-4xl lg:text-7xl mb-4 text-start leading-tight max-w-5xl oswald"
-        >
-          {title}
-        </h1>
+      <h1
+  style={{ color: textColor, fontWeight: 'bold' }}
+  className="text-5xl lg:text-7xl  mt-[-200px] lg:mt-[00px] mb-4 text-start leading-tight smax-w-5xl oswald"
+>
+  {title}
+</h1>
+
         
         <p 
           style={{ color: titleColor }} 

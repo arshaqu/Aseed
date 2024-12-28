@@ -123,7 +123,41 @@ function Whatwedo() {
 
   return (
     <div>
-      <section id='features' style={{ backgroundColor: '#1f4e3d' }} className="py-8 overflow-hidden relative">
+
+      
+      <section id='mission' className="bg-gray-100 py-12 mt-5">
+        <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 lg:px-24">
+          <div className="w-full md:w-1/2 text-center md:text-left mb-8 md:mb-0">
+            <p className="text-green-600 font-semibold uppercase mb-2">Explore</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+             Our Misssion{' '}
+              <span className="text-black"></span>
+            </h2>
+          </div>
+          <div className="hidden md:block border-l border-gray-300 h-32 mx-8"></div>
+          <div className="w-full md:w-1/2">
+            <p style={{fontSize:'13px'}} className="text-gray-400  leading-relaxed montserrat">
+            Our mission focuses on bridging the gap between marginalized communities and mainstream opportunities. By leveraging initiatives
+             in livelihood and entrepreneurship, we aim to create pathways for social cohesion, inclusive growth, and the restoration of human
+              dignity. Through empowering women, youth, children, and vulnerable groups, we are laying the foundation for a future built on equality,
+               self-reliance, and mutual support.
+
+            </p>
+
+            <p style={{fontSize:'13px'}} className="text-gray-400 mt-3 mb-6 leading-relaxed montserrat">
+            We are committed to creating sustainable change by addressing these interconnected areas. Through our collective efforts, we aim to inspire a society that embraces diversity, encourages opportunity, and fosters social justice for all.
+
+            </p>
+            <button className="bg-green-500 text-white font-semibold py-3 px-6 rounded hover:bg-green-600 transition duration-300">
+              Discover More
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section id='features' style={{ backgroundColor: '#1f4e3d' }} className="py-8 overflow-hidden mt-5 relative">
         <h1 className="text-center text-white montserrat text-2xl font-bold">Our Key Areas</h1>
         <h2 style={{ fontWeight: 100 }} className='text-center mb-8 text-white montserrats text-1xl'>
           Our work spans across key areas such as:

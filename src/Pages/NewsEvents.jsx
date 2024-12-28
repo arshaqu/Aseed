@@ -34,7 +34,7 @@ function NewsEvents() {
   ];
 
   return (
-    <div style={{ overflow: 'hidden' }} className="relative bg-gradient-to-br from-emerald-100 via-white to-yellow-200 py-16 montserrat">
+    <div style={{ overflow: 'hidden' }} className="relative bg-gradient-to-br from-emerald-100 via-white to-yellow-200 py-16  montserrat">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-32 h-32 bg-emerald-800 rounded-full -translate-x-16 -translate-y-16" />
