@@ -39,23 +39,23 @@ function Footer() {
             <h3 className="font-bold text-lg mb-4">Explore</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#about" className="hover:text-yellow-500">
+                <a href="#about-us" className="hover:text-yellow-500">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#team" className="hover:text-yellow-500">
-                  Meet Our Team
+                <a href="#mission" className="hover:text-yellow-500">
+                 Mission
                 </a>
               </li>
               <li>
-                <a href="#news" className="hover:text-yellow-500">
-                  News & Media
+                <a href="#newsevents" className="hover:text-yellow-500">
+                  News & Events
                 </a>
               </li>
               <li>
-                <a href="#services" className="hover:text-yellow-500">
-                  Services
+                <a href="#know_us" className="hover:text-yellow-500">
+                  Know more
                 </a>
               </li>
               <li>

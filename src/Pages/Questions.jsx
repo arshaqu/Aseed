@@ -14,6 +14,7 @@ function Questions() {
       </div>
 
       {/* Question and Answers Section */}
+      <section id='know_us'>
       <div className='montserrat' style={textContainerStyle}>
         <h4 style={headerStyle}>GET TO KNOW US</h4>
         <h2 style={titleStyle}>
@@ -39,6 +40,7 @@ function Questions() {
        
         </div>
       </div>
+      </section> 
     </div>
   );
 }

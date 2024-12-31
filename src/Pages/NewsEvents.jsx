@@ -34,6 +34,7 @@ function NewsEvents() {
   ];
 
   return (
+    <section id='newsevents'>
     <div style={{ overflow: 'hidden' }} className="relative bg-gradient-to-br from-emerald-100 via-white to-yellow-200 py-16  montserrat">
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
@@ -136,6 +137,7 @@ function NewsEvents() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 
