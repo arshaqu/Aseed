@@ -9,6 +9,7 @@ import Community from './Assets/keyImages/CommunityEngagement.jpg';
 import SocialEnter from './Assets/keyImages/socialenterprenuership101.jpg'
 import SkillDevelop from './Assets/keyImages/SkillDevelop101.jpg'
 import Wellbeing from './Assets/keyImages/Socialsecuritywellbeing101.jpg'
+import Research from './Assets/Reasearchninnovation.jpg'
 
 function Whatwedo() {
   const scrollContainerRef = useRef(null);
@@ -85,6 +86,13 @@ function Whatwedo() {
       alt: 'Gourmet Ingredients',
       title: 'Social security Wellbeing',
       description: 'Building resilient and supportive communities through participatory approaches that empower individuals to drive change.',
+    },
+    {
+      id: 12,
+      image: Research,
+      alt: 'Research and Innovation',
+      title: 'Research and Innovation',
+      description: 'Promoting cutting-edge research and innovative solutions to address emerging social, environmental, and economic challenges, ensuring long-term sustainability and impact.',
     },
   ];
 
