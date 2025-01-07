@@ -9,7 +9,7 @@ function App() {
     <div className="App">
           <Helmet>
   <meta charSet="utf-8" />
-  <title>MGO in Malappuram - Trusted Solutions</title>
+  <title>ASEED</title>
   <meta
     name="description"
     content="Discover MGO services in Malappuram. High-quality, trusted solutions for all your needs."
