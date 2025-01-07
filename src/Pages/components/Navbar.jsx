@@ -43,7 +43,7 @@ function Navbar() {
       >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src={Logo} className="h-12" alt="Aseed Logo" />
+            <img loading="lazy" src={Logo} className="h-12" alt="MGO services in Malappuram " />
             <span
               style={{ fontWeight: "bold", color: "#1f4e3d" }}
               className="self-center mt-2 text-4xl font-bold whitespace-nowrap dark:text-white marcellus"
@@ -143,7 +143,7 @@ function Navbar() {
             </ul>
           </div>
         </div>
-        <img src={brush} alt="brush" style={{ position: "absolute" }} />
+        <img loading="lazy" src={brush} alt="MGO services in Malappuram" style={{ position: "absolute" }} />
       </nav>
     </div>
   );

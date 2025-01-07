@@ -64,8 +64,9 @@ function Banner() {
         >
           <div className="">
     <img 
+    loading='lazy'
         src={Logoas} 
-        alt="Logo"
+        alt="MGO services in Malappuram"
         className="absolute w-50 h-auto mt-3 ml-[90px] sm:ml-[160px]"
         style={{
             top: '45%',

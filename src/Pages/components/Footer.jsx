@@ -24,7 +24,7 @@ function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
             <div className="flex justify-center items-center">
-  <img src={Logo} alt="Logo" className="w-80 h-56 lg:w-64 lg:h-40 lg:ml-[-30px]" />
+  <img src={Logo} alt="MGO services in Malappuram" className="w-80 h-56 lg:w-64 lg:h-40 lg:ml-[-30px]" loading="lazy" />
 </div>
 
             </div>

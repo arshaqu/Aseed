@@ -8,7 +8,8 @@ function Questions() {
       <div style={imageContainerStyle}>
         <img 
           src={questionImg}
-          alt="Farmer with organic produce" 
+          loading='lazy'
+          alt="MGO services in Malappuram" 
           style={imageStyle}
         />
       </div>

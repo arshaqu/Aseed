@@ -12,22 +12,25 @@ function AboutUs() {
           className="flex flex-wrap items-center justify-center bg-no-repeat bg-right bg-[length:400px] py-12 px-6"
           style={{ backgroundImage: `url(${Leaf})` }}
         >
+          
           {/* Left Section - Image and Circular Overlay */}
           <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-end">
             {/* Background Large Image */}
             <div className="rounded-full overflow-hidden w-[400px] h-[300px] lg:w-[500px] lg:h-[500px]">
               <img
+                loading='lazy'
                 src={image1}
-                alt="Agriculture Background "
+                alt="MGO services in Malappuram "
                 className="w-full h-full object-cover "
               />
             </div>
             {/* Circular Overlay Image */}
             <div className="absolute bottom-[-10%] left-[15%] lg:left-[35%] w-[180px] h-[180px] rounded-full  overflow-hidden shadow-lg">
-                <img   src={round} alt="" className='absolute inset-0 mt-1 mr-2 z-10' />
+                <img loading='lazy'  src={round} alt="MGO services in Malappuram" className='absolute inset-0 mt-1 mr-2 z-10' />
               <img
+                loading='lazy'
                 src={image2}
-                alt="Farmer"
+                alt="MGO services in Malappuram"
                 className= " absolute w-full h-full object-cover"
               />
             </div>

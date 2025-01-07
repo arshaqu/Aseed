@@ -61,6 +61,7 @@ function NewsEvents() {
               {/* Image Container */}
               <div className="relative overflow-hidden h-48">
                 <img
+                loading="lazy"
                   src={event.image}
                   alt={event.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
@@ -90,8 +91,9 @@ function NewsEvents() {
   <div  className="relative h-80">
     {/* Image */}
     <img
+      loading="lazy"
       src={Brochure}
-      alt="FSDHFKJDFHJKD"
+      alt="MGO services in Malappuram"
       className="w-full h-full object-cover"
     />
     {/* Centered Text */}

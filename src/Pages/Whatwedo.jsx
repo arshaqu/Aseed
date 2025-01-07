@@ -20,77 +20,77 @@ function Whatwedo() {
     {
       id: 1,
       image: Agriculture,
-      alt: 'Organic Products',
+      alt: 'MGO services in Malappuram',
       title: 'Agriculture',
       description: 'Enhancing food security and improving economic conditions through sustainable agricultural practices.',
     },
     {
       id: 2,
       image: Enterprenuer,
-      alt: 'Dairy Production',
+      alt: 'MGO services in Malappuram',
       title: 'Entrepreneurship',
       description: 'Cultivating a spirit of innovation and supporting small businesses to foster economic independence.',
     },
     {
       id: 3,
       image: Health,
-      alt: 'Sweet Exotic Fruits',
+      alt: 'MGO services in Malappuram',
       title: 'Health',
       description: 'Providing access to healthcare, nutrition, and mental wellness services to improve quality of life.',
     },
     {
       id: 4,
       image: YouthandChild,
-      alt: 'Fresh Vegetables',
+      alt: 'MGO services in Malappuram',
       title: 'Women youth and child',
       description: 'Focusing on gender equity, youth empowerment, and child development to create brighter futures for the next generation.',
     },
     {
       id: 5,
       image: SocialEnter,
-      alt: 'More Vegetables',
+      alt: 'MMGO services in Malappuram',
       title: 'Social Entrepreneurship',
       description: 'Encouraging business models that address social challenges and promote community development.',
     },
     {
       id: 6,
       image: Education,
-      alt: 'Education',
+      alt: 'MGO services in Malappuram',
       title: 'Education',
       description: 'Ensuring marginalized children and women have access to quality, accessible learning experiences that empower and uplift.',
     },
     {
       id: 7,
       image: Levlihood,
-      alt: 'Rare Spices',
+      alt: 'MGO services in Malappuram',
       title: 'Livelihood ',
       description: 'Economic empowerment through skills training, entrepreneurship, and job placement.',
     },
     {
       id: 8,
       image: SkillDevelop,
-      alt: 'Skill Development',
+      alt: 'MGO services in Malappuram',
       title: 'Skill Development',
       description: 'Offering skills training, entrepreneurship support, and job placement initiatives to foster economic empowerment.',
     },
     {
       id: 10,
       image: Community,
-      alt: 'Gourmet Ingredients',
+      alt: 'MGO services in Malappuram',
       title: 'Community Engagement',
       description: 'Building resilient and supportive communities through participatory approaches that empower individuals to drive change.',
     },
     {
       id: 11,
       image: Wellbeing,
-      alt: 'Gourmet Ingredients',
+      alt: 'MGO services in Malappuram',
       title: 'Social security Wellbeing',
       description: 'Building resilient and supportive communities through participatory approaches that empower individuals to drive change.',
     },
     {
       id: 12,
       image: Research,
-      alt: 'Research and Innovation',
+      alt: 'MGO services in Malappuram',
       title: 'Research and Innovation',
       description: 'Promoting cutting-edge research and innovative solutions to address emerging social, environmental, and economic challenges, ensuring long-term sustainability and impact.',
     },
@@ -196,7 +196,7 @@ function Whatwedo() {
               <div key={`${card.id}-duplicate`} className="flex-shrink-0 w-64 mx-4 bg-white rounded-lg shadow dark:bg-gray-800 overflow-hidden h-80">
                 <div className="flex flex-col h-full">
                   <div className="flex justify-center items-center pt-6 pb-1">
-                    <img className="rounded-full w-32 h-32 object-cover" src={card.image} alt={card.alt} />
+                    <img className="rounded-full w-32 h-32 object-cover" src={card.image} loading='lazy' alt={card.alt} />
                   </div>
                   <div className="p-4 flex-grow flex flex-col">
                     <h5 className="font-bold text-gray-900 dark:text-white text-center text-lg mb-2 montserrat">{card.title}</h5>
@@ -210,7 +210,7 @@ function Whatwedo() {
               <div key={`${card.id}-duplicate`} className="flex-shrink-0 w-64 mx-4 bg-white rounded-lg shadow dark:bg-gray-800 overflow-hidden h-80">
                 <div className="flex flex-col h-full">
                   <div className="flex justify-center items-center pt-6 pb-1">
-                    <img className="rounded-full w-32 h-32 object-cover" src={card.image} alt={card.alt} />
+                    <img className="rounded-full w-32 h-32 object-cover" src={card.image} loading='lazy' alt={card.alt} />
                   </div>
                   <div className="p-4 flex-grow flex flex-col">
                     <h5 className="font-bold text-gray-900 dark:text-white text-center text-lg mb-2 montserrat">{card.title}</h5>
